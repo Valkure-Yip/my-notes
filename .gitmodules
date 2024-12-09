@@ -1,0 +1,12 @@
+[submodule "content/经济学"]
+	path = content/经济学
+	url = git@github.com:Valkure-Yip/economics-knowledge-vault.git
+[submodule "content/前端"]
+	path = content/前端
+	url = git@github.com:Valkure-Yip/web_frontend_keynotes.git
+[submodule "content/React"]
+	path = content/React
+	url = git@github.com:Valkure-Yip/react-learning-notes.git
+[submodule "content/系统设计"]
+	path = content/系统设计
+	url = git@github.com:Valkure-Yip/system-design.git
