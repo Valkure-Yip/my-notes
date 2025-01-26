@@ -19,61 +19,44 @@ These are my note repositories. Please open with Obsidian.
 - [blockchain notes](https://github.com/Valkure-Yip/blockchain)
 - [Operating System: Three Easy Pieces](https://github.com/Valkure-Yip/ostep)
 
-## Checkout existing submodule
+## Clone Repositories
+to clone all repositories:
 ```bash
-git submodule update --init path/to/specific/submodule
-```
-or to checkout all submodules:
-```bash
-git submodule update --init
-```
-to update a submodule to the latest commit:
-```bash
-git submodule update --remote path/to/specific/submodule
-```
-or to update all submodules:
-```bash
-git submodule update --remote
+git clone git@github.com:Valkure-Yip/web_frontend_keynotes.git
+git clone git@github.com:Valkure-Yip/react-learning-notes.git
+git clone git@github.com:Valkure-Yip/d3js-notes.git
+git clone git@github.com:Valkure-Yip/system-design.git
+git clone git@github.com:Valkure-Yip/langchain-tutorial.git
+git clone git@github.com:Valkure-Yip/machine_learning_deep_learning_notes.git
+git clone git@github.com:Valkure-Yip/mysql.git
+git clone git@github.com:Valkure-Yip/economics-knowledge-vault.git
+git clone git@github.com:Valkure-Yip/work-project-notes.git
+git clone git@github.com:Valkure-Yip/blockchain.git
+git clone git@github.com:Valkure-Yip/ostep.git
 ```
 
-## Add new notes repository
-Note repository added as submodule:
+## Update Repositories
+to update all repositories:
 ```bash
-git submodule add git@github.com:Valkure-Yip/web_frontend_keynotes.git
-git submodule add git@github.com:Valkure-Yip/react-learning-notes.git
-git submodule add git@github.com:Valkure-Yip/d3js-notes.git
-git submodule add git@github.com:Valkure-Yip/system-design.git
-git submodule add git@github.com:Valkure-Yip/langchain-tutorial.git
-git submodule add git@github.com:Valkure-Yip/machine_learning_deep_learning_notes.git
-git submodule add git@github.com:Valkure-Yip/mysql.git
-git submodule add git@github.com:Valkure-Yip/economics-knowledge-vault.git
-git submodule add git@github.com:Valkure-Yip/work-project-notes.git
-git submodule add git@github.com:Valkure-Yip/blockchain.git
-git submodule add git@github.com:Valkure-Yip/ostep.git
+# sync.sh
+for dir in */; do
+  if [ -d "$dir/.git" ]; then
+    cd "$dir"
+    echo "Updating $dir"
+    echo "Pulling latest changes"
+    git pull
+    echo "Adding all changes"
+    git add .
+    echo "Committing changes"
+    git commit -m "Automatic update"
+    echo "Pushing changes"
+    git push
+    echo "Done"
+    cd ..
+  fi
+done
 
 ```
-To add new submodule, follow the same convention as above.
-```bash
-git submodule add git@github.com:Valkure-Yip/your-new-repo.git
-```
-## Delete submodule content
-```bash
-git submodule deinit -f path/to/specific/submodule
-```
-or to delete all submodules:
-```bash
-git submodule deinit -f .
-```
-## Remove submodule
-```bash
-git submodule deinit -f path/to/specific/submodule
-git rm -f path/to/specific/submodule
-rm -rf .git/modules/path/to/specific/submodule
-```
-For example, to remove the react-learning-notes submodule:
-```bash
-git submodule deinit -f react-learning-notes
-git rm -f react-learning-notes
-rm -rf .git/modules/react-learning-notes
-```
+
+
 
