@@ -64,3 +64,16 @@ or to delete all submodules:
 ```bash
 git submodule deinit -f .
 ```
+## Remove submodule
+```bash
+git submodule deinit -f path/to/specific/submodule
+git rm -f path/to/specific/submodule
+rm -rf .git/modules/path/to/specific/submodule
+```
+For example, to remove the react-learning-notes submodule:
+```bash
+git submodule deinit -f react-learning-notes
+git rm -f react-learning-notes
+rm -rf .git/modules/react-learning-notes
+```
+
