@@ -1,0 +1,33 @@
+[submodule "web_frontend_keynotes"]
+	path = web_frontend_keynotes
+	url = git@github.com:Valkure-Yip/web_frontend_keynotes.git
+[submodule "react-learning-notes"]
+	path = react-learning-notes
+	url = git@github.com:Valkure-Yip/react-learning-notes.git
+[submodule "d3js-notes"]
+	path = d3js-notes
+	url = git@github.com:Valkure-Yip/d3js-notes.git
+[submodule "system-design"]
+	path = system-design
+	url = git@github.com:Valkure-Yip/system-design.git
+[submodule "langchain-tutorial"]
+	path = langchain-tutorial
+	url = git@github.com:Valkure-Yip/langchain-tutorial.git
+[submodule "machine_learning_deep_learning_notes"]
+	path = machine_learning_deep_learning_notes
+	url = git@github.com:Valkure-Yip/machine_learning_deep_learning_notes.git
+[submodule "mysql"]
+	path = mysql
+	url = git@github.com:Valkure-Yip/mysql.git
+[submodule "economics-knowledge-vault"]
+	path = economics-knowledge-vault
+	url = git@github.com:Valkure-Yip/economics-knowledge-vault.git
+[submodule "work-project-notes"]
+	path = work-project-notes
+	url = git@github.com:Valkure-Yip/work-project-notes.git
+[submodule "blockchain"]
+	path = blockchain
+	url = git@github.com:Valkure-Yip/blockchain.git
+[submodule "ostep"]
+	path = ostep
+	url = git@github.com:Valkure-Yip/ostep.git
