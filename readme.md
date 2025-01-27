@@ -19,44 +19,48 @@ These are my note repositories. Please open with Obsidian.
 - [blockchain notes](https://github.com/Valkure-Yip/blockchain)
 - [Operating System: Three Easy Pieces](https://github.com/Valkure-Yip/ostep)
 
-## Clone Repositories
-to clone all repositories:
-```bash
-git clone git@github.com:Valkure-Yip/web_frontend_keynotes.git
-git clone git@github.com:Valkure-Yip/react-learning-notes.git
-git clone git@github.com:Valkure-Yip/d3js-notes.git
-git clone git@github.com:Valkure-Yip/system-design.git
-git clone git@github.com:Valkure-Yip/langchain-tutorial.git
-git clone git@github.com:Valkure-Yip/machine_learning_deep_learning_notes.git
-git clone git@github.com:Valkure-Yip/mysql.git
-git clone git@github.com:Valkure-Yip/economics-knowledge-vault.git
-git clone git@github.com:Valkure-Yip/work-project-notes.git
-git clone git@github.com:Valkure-Yip/blockchain.git
-git clone git@github.com:Valkure-Yip/ostep.git
+## Manage Repositories Config
+Repository list is maintained in [repos.ini](repos.ini). If you have more repositories, you can add them to the file.
+```ini
+; Add your repository here
+[repos]
+web_frontend_keynotes = git@github.com:Valkure-Yip/web_frontend_keynotes.git
+react_learning_notes = git@github.com:Valkure-Yip/react-learning-notes.git
+d3js_notes = git@github.com:Valkure-Yip/d3js-notes.git
+system_design = git@github.com:Valkure-Yip/system-design.git
+langchain_tutorial = git@github.com:Valkure-Yip/langchain-tutorial.git
+machine_learning_deep_learning_notes = git@github.com:Valkure-Yip/machine_learning_deep_learning_notes.git
+mysql = git@github.com:Valkure-Yip/mysql.git
+economics_knowledge_vault = git@github.com:Valkure-Yip/economics-knowledge-vault.git
+work_project_notes = git@github.com:Valkure-Yip/work-project-notes.git
+blockchain = git@github.com:Valkure-Yip/blockchain.git
+ostep = git@github.com:Valkure-Yip/ostep.git
 ```
 
-## Update Repositories
-to update all repositories:
-```bash
-# sync.sh
-for dir in */; do
-  if [ -d "$dir/.git" ]; then
-    cd "$dir"
-    echo "Updating $dir"
-    echo "Pulling latest changes"
-    git pull
-    echo "Adding all changes"
-    git add .
-    echo "Committing changes"
-    git commit -m "Automatic update"
-    echo "Pushing changes"
-    git push
-    echo "Done"
-    cd ..
-  fi
-done
-
-```
-
+## Usage
+- To clone all repositories, run:
+  ```bash
+  bash clone.sh
+  ```
+- To clone a specific repository, run:
+  ```bash
+  bash clone.sh <repository_name>
+  ```
+  For example, to clone the `react_learning_notes` repository, run:
+  ```bash
+  bash clone.sh react_learning_notes
+  ```
+- To list all repositories, run:
+  ```bash
+  bash list.sh
+  ```
+- To list all repositories with remote sync status, run:
+  ```bash
+  bash list.sh --remote
+  ```
+- To sync all repositories, run:
+  ```bash
+  bash sync.sh
+  ```
 
 
